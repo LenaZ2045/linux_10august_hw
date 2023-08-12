@@ -1,0 +1,192 @@
+bogyp@Trojan MINGW64 ~
+$ ssh -i ~/.ssh/id_rsa ec2-user@linux.telran-edu.de
+Last login: Sat Aug 12 17:42:39 2023 from 46.109.108.215
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+Welcome to Amazon server, Tel-ran user!
+15 package(s) needed for security, out of 16 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-33-20 ~]$ cd /260623_evening
+-bash: cd: /260623_evening: No such file or directory
+[ec2-user@ip-172-31-33-20 ~]$ cd /opt/260623_evening
+[ec2-user@ip-172-31-33-20 260623_evening]$ cd yelena
+[ec2-user@ip-172-31-33-20 yelena]$ nano taskYelena.sh
+[ec2-user@ip-172-31-33-20 yelena]$ chmod 744 taskYelena.sh
+[ec2-user@ip-172-31-33-20 yelena]$ ls -l
+total 36
+-rw-rw-r-- 1 ec2-user ec2-user 22836 Aug 10 20:22 history_august10_bitbash.txt
+-rw-rw-r-- 1 ec2-user ec2-user   136 Aug 10 19:20 output.txt
+-rwxr--r-- 1 ec2-user ec2-user    35 Aug 10 19:18 script0.sh
+-rwxr--r-- 1 ec2-user ec2-user    72 Aug 12 20:42 taskYelena.sh
+[ec2-user@ip-172-31-33-20 yelena]$ taskYelena.sh
+-bash: taskYelena.sh: command not found
+[ec2-user@ip-172-31-33-20 yelena]$ script0.sh
+-bash: script0.sh: command not found
+[ec2-user@ip-172-31-33-20 yelena]$ bash taskYelena.sh
+1 _08/12/23
+2 _08/12/23
+3 _08/12/23
+4 _08/12/23
+5 _08/12/23
+6 _08/12/23
+7 _08/12/23
+8 _08/12/23
+9 _08/12/23
+10 _08/12/23
+[ec2-user@ip-172-31-33-20 yelena]$ crontab -e
+crontab: installing new crontab
+[ec2-user@ip-172-31-33-20 yelena]$ cat taskYelena.sh
+#!/bin/bash
+        for run in {1..10}
+        do
+        echo -n $run "_"
+        date '+%D'
+        done
+[ec2-user@ip-172-31-33-20 yelena]$ nano taskYelena.sh
+[ec2-user@ip-172-31-33-20 yelena]$ cat taskYelena.sh
+#!/bin/bash
+        for run in {1..10}
+        do
+        echo -n $run"_"
+        date '+%D'
+        done
+[ec2-user@ip-172-31-33-20 yelena]$ bash taskYelena.sh
+1_08/12/23
+2_08/12/23
+3_08/12/23
+4_08/12/23
+5_08/12/23
+6_08/12/23
+7_08/12/23
+8_08/12/23
+9_08/12/23
+10_08/12/23
+[ec2-user@ip-172-31-33-20 yelena]$ cat output.txt
+Thu Aug 10 19:17:01 UTC 2023
+Thu Aug 10 19:18:01 UTC 2023
+Thu Aug 10 19:19:01 UTC 2023
+it works!
+Thu Aug 10 19:20:01 UTC 2023
+it works!
+[ec2-user@ip-172-31-33-20 yelena]$ cat output.txt
+Thu Aug 10 19:17:01 UTC 2023
+Thu Aug 10 19:18:01 UTC 2023
+Thu Aug 10 19:19:01 UTC 2023
+it works!
+Thu Aug 10 19:20:01 UTC 2023
+it works!
+[ec2-user@ip-172-31-33-20 yelena]$ crontab -e
+crontab: installing new crontab
+[ec2-user@ip-172-31-33-20 yelena]$ cat output1.txt
+1_08/12/23
+2_08/12/23
+3_08/12/23
+4_08/12/23
+5_08/12/23
+6_08/12/23
+7_08/12/23
+8_08/12/23
+9_08/12/23
+10_08/12/23
+[ec2-user@ip-172-31-33-20 yelena]$ nano taskYelena.sh
+[ec2-user@ip-172-31-33-20 yelena]$ cat taskYelena.sh
+#!/bin/bash
+
+date
+
+        for run in {1..10}
+        do
+        echo -n $run"_"
+        date '+%D'
+        done
+[ec2-user@ip-172-31-33-20 yelena]$ bash taskYelena.sh
+Sat Aug 12 21:37:40 UTC 2023
+1_08/12/23
+2_08/12/23
+3_08/12/23
+4_08/12/23
+5_08/12/23
+6_08/12/23
+7_08/12/23
+8_08/12/23
+9_08/12/23
+10_08/12/23
+[ec2-user@ip-172-31-33-20 yelena]$ cat output1.txt
+1_08/12/23
+2_08/12/23
+3_08/12/23
+4_08/12/23
+5_08/12/23
+6_08/12/23
+7_08/12/23
+8_08/12/23
+9_08/12/23
+10_08/12/23
+[ec2-user@ip-172-31-33-20 yelena]$ cat output1.txt
+1_08/12/23
+2_08/12/23
+3_08/12/23
+4_08/12/23
+5_08/12/23
+6_08/12/23
+7_08/12/23
+8_08/12/23
+9_08/12/23
+10_08/12/23
+[ec2-user@ip-172-31-33-20 yelena]$ cat output1.txt
+1_08/12/23
+2_08/12/23
+3_08/12/23
+4_08/12/23
+5_08/12/23
+6_08/12/23
+7_08/12/23
+8_08/12/23
+9_08/12/23
+10_08/12/23
+[ec2-user@ip-172-31-33-20 yelena]$ crontab -e
+crontab: installing new crontab
+[ec2-user@ip-172-31-33-20 yelena]$ ls -l
+total 40
+-rw-rw-r-- 1 ec2-user ec2-user 22836 Aug 10 20:22 history_august10_bitbash.txt
+-rw-r--r-- 1 ec2-user ec2-user   111 Aug 12 21:15 output1.txt
+-rw-rw-r-- 1 ec2-user ec2-user   136 Aug 10 19:20 output.txt
+-rwxr--r-- 1 ec2-user ec2-user    35 Aug 10 19:18 script0.sh
+-rwxr--r-- 1 ec2-user ec2-user    78 Aug 12 21:37 taskYelena.sh
+[ec2-user@ip-172-31-33-20 yelena]$ cat output1.txt
+1_08/12/23
+2_08/12/23
+3_08/12/23
+4_08/12/23
+5_08/12/23
+6_08/12/23
+7_08/12/23
+8_08/12/23
+9_08/12/23
+10_08/12/23
+[ec2-user@ip-172-31-33-20 yelena]$ cat output0.txt
+cat: output0.txt: No such file or directory
+[ec2-user@ip-172-31-33-20 yelena]$ cat output0.txt
+cat: output0.txt: No such file or directory
+[ec2-user@ip-172-31-33-20 yelena]$ crontab -e
+crontab: no changes made to crontab
+[ec2-user@ip-172-31-33-20 yelena]$ crontab -e
+crontab: no changes made to crontab
+[ec2-user@ip-172-31-33-20 yelena]$ cat output0.txt
+cat: output0.txt: No such file or directory
+[ec2-user@ip-172-31-33-20 yelena]$ cat output1.txt
+1_08/12/23
+2_08/12/23
+3_08/12/23
+4_08/12/23
+5_08/12/23
+6_08/12/23
+7_08/12/23
+8_08/12/23
+9_08/12/23
+10_08/12/23
+[ec2-user@ip-172-31-33-20 yelena]$
